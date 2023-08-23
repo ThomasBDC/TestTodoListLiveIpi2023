@@ -87,6 +87,24 @@ namespace TestTodoListLiveIpi2023.Controllers
 
         // POST: api/TodoItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Créer une tâche à faire 
+        /// </summary>
+        /// <remarks>
+        /// Sample request : 
+        /// 
+        ///     POST /TodoItems
+        ///     {
+        ///         "id":1,
+        ///         "name":"Item1",
+        ///         "isComplete":true
+        ///     }
+        ///     
+        /// </remarks>
+        /// <param name="todoItem"></param>
+        /// <returns>A newly created todo items</returns>
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response>
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
@@ -101,6 +119,11 @@ namespace TestTodoListLiveIpi2023.Controllers
         }
 
         // DELETE: api/TodoItems/5
+        /// <summary>
+        /// Cette méthode sert à supprimer
+        /// </summary>
+        /// <param name="id">ID de l'item</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(long id)
         {
