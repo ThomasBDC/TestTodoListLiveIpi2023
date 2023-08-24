@@ -31,7 +31,7 @@ builder.Services.AddSwaggerGen(c =>
     c.IncludeXmlComments(xmlPath);
 });
 
-builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoListIpi2023"));
+builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("vdfsgf");
 
 var app = builder.Build();
 
